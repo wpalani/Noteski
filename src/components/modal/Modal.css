@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+#note-modal {
+    min-height: 100vh;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+#note-modal-header {
+    background-color: var(--off-white);
+    box-shadow: 0 1px 1px 0px var(--borders);
+    padding: .3rem 0;
+}
+
+#note-modal-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+}
+
+#note-modal-header-content > div {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#note-modal-header-content div:last-child {
+    justify-content: flex-end;
+}
+
+#note-modal-header-content button.noteski-btn {
+    font-size: .8rem;
+    min-width: 91px;
+    max-width: 91px;
+    min-height: 33.4px;
+    min-height: 33.4px;
+}
+
+#note-modal-content {
+    height: 93vh;
+    overflow-y: scroll;
+}
+
+#note-modal-title[contentEditable=true]:empty:before,
+#note-modal-body[contentEditable=true]:empty:before {
+    content:attr(data-placeholder);
+    color: var(--text-placeholder);
+    font-family: 'Roboto Mono', monospace;
+    cursor: text;
+}
+
+#note-modal-title:focus,
+#note-modal-body:focus {
+    outline: none;
+}
+
+#note-modal-title {
+    font-size: 1.15rem;
+    padding: 3rem 0 1.35rem 0;
+    min-width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    white-space: pre-line;
+}
+
+#note-modal-body {
+    font-size: .9rem;
+    padding-bottom: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    white-space: pre-line;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+
+@media only screen and (min-width: 940px) {
+    #note-modal-content .max-width {
+        max-width: 700px;
+    }
+
+    #note-modal-title {
+        padding-top: 5rem;
+    }
+}

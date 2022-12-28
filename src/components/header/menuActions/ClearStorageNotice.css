@@ -1,0 +1,76 @@
+#clear-storage-notice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 102;
+    min-width: 100%;
+}
+
+#clear-storage-notice-container {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+
+#clear-storage-notice-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#clear-storage-notice-content {
+    padding: 1.5rem;
+    background-color: #30313b;
+    color: var(--white);
+    z-index: 103;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#clear-storage-notice-content-bfs {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: .7rem;
+    font-size: 1.1rem;
+}
+
+#clear-storage-notice-content-options {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+#clear-storage-notice-content-options #a_cancel {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 600px) {
+    #clear-storage-notice-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #clear-storage-notice-content {
+        max-width: 80%;
+        border-radius: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 940px) {
+    #clear-storage-notice-content {
+        max-width: 650px;
+    }
+}

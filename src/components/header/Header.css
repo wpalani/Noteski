@@ -1,0 +1,155 @@
+header {
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--borders);
+}
+
+header #header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header img.noteski-logo {
+    max-width: 115px;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+#menu-container {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#menu-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#menu-content {
+    min-width: 70%;
+    max-width: 70%;
+    min-height: 100%;
+    padding: 1.25rem;
+    background-color: var(--white);
+    z-index: 100;
+    position: relative;
+}
+
+#menu-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-content h4 {
+    font-size: 1.3rem;
+}
+
+#menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.menu-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--primary-lighter);
+    border-radius: 8px;
+    padding: 10px;
+    transition: .15s all ease-in-out;
+    cursor: pointer;
+}
+
+.menu-action:hover {
+    background-color: var(--primary-light);
+}
+
+.menu-action:active {
+    background-color: var(--primary-light);
+    box-shadow: 0 0 0 3px var(--primary-lighter);
+}
+
+.menu-action h5 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.menu-action p {
+    font-size: .8rem;
+    color: #6b6f7e;
+}
+
+#header-credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: .85rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+}
+
+#header-credits-github {
+    flex-grow: 1;
+}
+
+#header-credits a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+}
+
+#header-credits-github img {
+    max-width: 24px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    #menu-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-content {
+        border-radius: 6.5px;
+        min-width: 60%;
+        max-width: 60%;
+    }
+
+    #menu-actions {
+        margin-bottom: 5rem;
+    }
+}
+
+
+@media only screen and (min-width: 940px) {
+    #menu-content {
+        min-width: 550px;
+        max-width: 550px;
+    }
+}

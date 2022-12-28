@@ -1,0 +1,78 @@
+button.noteski-btn {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .95rem;
+    line-height: unset;
+    border: 1px solid var(--primary);
+    color: white;
+    border-radius: 3px;
+    background-color: var(--primary);
+    padding: .4rem 1.4rem;
+    transition: .2s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.noteski-btn:hover {
+    box-shadow: 0 0 0px 2.5px var(--borders);
+}
+
+button.noteski-btn:active {
+    background-color: var(--primary-active);
+    border-color: var(--primary-active);
+}
+
+button.noteski-btn:disabled {
+    filter: grayscale(.7);
+    color: #dcdcdc;
+    cursor: default;
+    box-shadow: unset;
+}
+
+button.noteski-btn:disabled:active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+button.noteski-btn-loading:hover,
+button.noteski-btn-success:hover,
+button.noteski-btn-error:hover {
+    cursor: default;
+    box-shadow: unset;
+}
+
+button.noteski-btn-loading:active,
+button.noteski-btn-success:active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+button.noteski-btn-error {
+    background-color: #993d3d;
+    border-color: #993d3d; 
+}
+
+button.noteski-btn-error:active {
+    background-color: #993d3d;
+    border-color: #993d3d; 
+}
+
+.noteski-action-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 2.25px 3px;
+    border-radius: 999px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.noteski-action-icon:hover {
+    background-color: var(--primary-lighter);
+}
+
+.noteski-action-icon:active {
+    background-color: var(--primary-light);
+}

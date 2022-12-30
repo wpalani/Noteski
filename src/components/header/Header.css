@@ -27,8 +27,8 @@ header img.noteski-logo {
 }
 
 #menu-container {
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100dvh;
     display: flex;
     justify-content: flex-end;
     position: relative;

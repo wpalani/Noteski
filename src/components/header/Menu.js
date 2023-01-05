@@ -47,7 +47,7 @@ const Menu = ({ setShowMenu, setNotes }) => {
 
                     <div id="header-credits">
                         <div id="header-credits-github">
-                            <a href="https://github.com/aalani95" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/aalani95/Noteski" target="_blank" rel="noreferrer">
                                 <img src={Github_Logo} alt="Github" />
                                 <p>Noteski on Github</p>
                             </a>

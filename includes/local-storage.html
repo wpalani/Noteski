@@ -1,0 +1,57 @@
+<div id="local-storage-container" class="max-width">
+    <div>
+        <h2 class="noteski-title">Store Notes on Your Browser</h2>
+        <p>All your notes will be stored on and accessed from your local browser storage. This means that your notes
+            will not be shared with any cloud database, giving you maximum privacy and peace of mind. Additionally, you
+            have complete control over your notes and can take them with you wherever you go, even when you're offline.
+        </p>
+        <img src="/assets/images/Browsers.webp" alt="Web Browsers" draggable="false">
+    </div>
+    <div>
+        <img src="/assets/images/local-storage-asset.webp" alt="Local Storage API">
+    </div>
+</div>
+
+
+<style>
+    #local-storage {
+        padding: 6rem 0;
+    }
+
+    #local-storage-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3.25rem;
+    }
+
+    #local-storage-container p {
+        margin: .8rem 0 1.7rem;
+    }
+
+    #local-storage-container div:first-of-type img {
+        max-width: 200px;
+    }
+
+    #local-storage-container div:last-of-type img {
+        border-radius: 7px;
+        box-shadow: 0 0 16px 1px var(--borders);
+    }
+
+    /* Table lg / Notebook sm < */
+    @media only screen and (min-width: 960px) {
+        #local-storage-container {
+            flex-direction: row;
+            gap: 5.5rem;
+        }
+
+        #local-storage-container>div {
+            flex: 1 1;
+        }
+
+        #local-storage-container div:first-of-type img {
+            max-width: 225px;
+        }
+    }
+</style>

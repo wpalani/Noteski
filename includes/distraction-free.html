@@ -1,0 +1,62 @@
+<div id="distraction-free-container" class="max-width">
+    <div>
+        <h2 class="noteski-title">Distraction-free Editor Experience</h2>
+        <p>
+            Noteski is designed to provide a distraction-free environment for taking and organizing notes. The simple
+            and uncluttered interface allows you to focus on the task at hand and type without distractions.
+        </p>
+        <a href="https://app.noteski.me/" target="_blank" class="noteski-btn">Try Noteski Now</a>
+    </div>
+    <div>
+        <img src="/assets/images/noteski-editor.webp" alt="Noteski in-app editor screenshot">
+    </div>
+</div>
+
+
+<style>
+    #distraction-free {
+        padding-bottom: 6rem;
+        background-image: linear-gradient(0deg, var(--off-white) 30%, var(--white) 0%);
+    }
+
+    #distraction-free-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.25rem;
+    }
+
+    #distraction-free-container > div {
+        flex: 1 1;
+    }
+
+    #distraction-free-container p {
+        margin: .8rem 0 1.7rem;
+    }
+
+    #distraction-free-container a.noteski-btn {
+        display: inline;
+    }
+
+    #distraction-free-container img {
+        border-radius: 5px;
+        border: 1.5px solid #E8E8E8;
+        box-shadow: 0 0 16px 1px var(--borders);
+    }
+
+    /* Table lg / Notebook sm < */
+    @media only screen and (min-width: 960px) {
+        #distraction-free {
+            padding: 6rem 0 6rem;
+            background-image: linear-gradient(280deg, var(--off-white) 40%, var(--white) 0%);
+            border-top: 5px solid var(--off-white);
+            border-bottom: 5px solid var(--off-white);
+        }
+
+        #distraction-free-container {
+            flex-direction: row;
+            gap: 5.5rem;
+        }
+    }
+</style>

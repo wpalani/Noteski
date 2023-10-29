@@ -1,0 +1,222 @@
+<div id="features-container" class="max-width">
+    <div>
+        <h3 class="noteski-title">Customize Your Notes</h3>
+        <p>
+            The editor includes a color picker which makes it easy to personalize and organize your notes for maximum
+            productivity.
+        </p>
+        <div id="features-note">
+            <div id="features-note-content">
+                Butterflies are some of the most beautiful and intriguing insects in the world. In this note, learn
+                about the life cycle and behaviors of butterflies, as well as their importance in the ecosystem and
+                their cultural significance.
+            </div>
+            <div id="features-note-colors">
+                <div id="features-note-color-yellow" class="features-note-color features-note-color-active"></div>
+                <div id="features-note-color-green" class="features-note-color"></div>
+                <div id="features-note-color-purple" class="features-note-color"></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="noteski-title">Own Your Data</h3>
+        <p>
+            Your notes are never stored or shared anywhere else but your browser. Switched browsers? Move your notes
+            from one browser to another at any time with ease.
+        </p>
+        <img src="/assets/images/noteski-options.webp" alt="Noteski data export and import options" draggable="false">
+    </div>
+</div>
+<div id="features-separator"></div>
+
+
+<style>
+    #features {
+        padding: 6rem 0;
+        position: relative;
+        border-bottom: 5px solid var(--off-white);
+        --note-color-yellow: #f9ea9c;
+        --note-color-yellow-fold: #e2c57c;
+        --note-color-purple: #b99cf9;
+        --note-color-purple-fold: #9173d1;
+        --note-color-green: #c6f99c;
+        --note-color-green-fold: #9cd171;
+        --note-color-active: #5c6072;
+        --note-color: #f9ea9c;
+        --note-color-fold: #e2c57c;
+    }
+
+    #features-separator {
+        display: none;
+    }
+
+    #features-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6.25rem;
+    }
+
+    #features-container > div {
+        flex: 1 1;
+    }
+
+    #features-container p {
+        margin: .8rem 0 1.7rem;
+    }
+
+    #features-note {
+        position: relative;
+    }
+
+    #features-note::before {
+        content: "";
+        position: absolute;
+        right: 2rem;
+        bottom: -1.95rem;
+        left: 0;
+        background-color: var(--note-color);
+        border: 1rem solid var(--note-color);
+        z-index: -1;
+    }
+
+    #features-note::after {
+        content: "";
+        position: absolute;
+        right: 1px;
+        bottom: -1.95rem;
+        border-width: 2rem 2rem 0 0;
+        border-style: solid;
+        border-color: var(--note-color-fold) transparent;
+        filter: drop-shadow(-4px 5px 9px rgba(0, 0, 0, 0.5));
+    }
+
+    #features-note #features-note-content {
+        background-color: var(--note-color);
+        padding: 2rem 2rem 5rem;
+        font-family: Georgia, Times, serif;
+        font-size: 1.15rem;
+        font-style: italic;
+    }
+
+    #features-note #features-note-colors {
+        display: flex;
+        gap: .9rem;
+        align-items: flex-end;
+        position: absolute;
+        bottom: .65rem;
+        left: 2rem;
+        z-index: 2;
+    }
+
+    #features-note-colors .features-note-color {
+        width: 1.95rem;
+        height: 1.95rem;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 999px;
+        position: relative;
+        transition: .3s all ease-in-out;
+        cursor: default;
+    }
+
+    #features-note-colors #features-note-color-yellow {
+        background-color: var(--note-color-yellow);
+        border-color: var(--note-color-yellow-fold);
+    }
+
+    #features-note-colors #features-note-color-green {
+        background-color: var(--note-color-green);
+        border-color: var(--note-color-green-fold);
+    }
+
+    #features-note-colors #features-note-color-purple {
+        background-color: var(--note-color-purple);
+        border-color: var(--note-color-purple-fold);
+    }
+
+    #features-note-colors .features-note-color-active {
+        margin-bottom: .4rem;
+        box-shadow: 0 0 0 2px var(--note-color-active);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #features-note-colors .features-note-color-active::after {
+        content: "";
+        position: absolute;
+        min-width: .45rem;
+        min-height: .45rem;
+        border-radius: 999px;
+        background-color: var(--note-color-active);
+        opacity: .6;
+        transition: .3s all ease-in-out;
+    }
+
+    /* Table lg / Notebook sm < */
+    @media only screen and (min-width: 960px) {
+        #features {
+            padding: 9rem 0;
+        }
+        #features-container {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10rem;
+        }
+
+        #features-separator {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            min-width: 6px;
+            min-height: 100%;
+            margin: 0 auto;
+            background-color: var(--off-white);
+        }
+    }
+</style>
+
+<script>
+    /**
+     * this code changes the background color and active swatch for "Customize Your Notes" section
+     * it works by getting the current active swatch next sibling and get its background and border colors
+     * then it assign those values to the background color and ::after (fold) color of the note
+     * repeat
+     */
+    const notesColorSwitcher = {
+        activeSwatch() {
+            const activeSwatch = document.querySelector('.features-note-color-active');
+
+            return activeSwatch;
+        },
+
+        changeColor(currentSwatch) {
+            let nextSwatch = currentSwatch.nextElementSibling;
+            if (!nextSwatch) {
+                nextSwatch = document.querySelector('.features-note-color:first-of-type');
+            }
+
+            const nextSwatchColors = {
+                bg: getComputedStyle(nextSwatch).backgroundColor,
+                fold: getComputedStyle(nextSwatch).borderColor
+            }
+
+            const featuresSection = document.querySelector('#features');
+            setTimeout(() => {
+                featuresSection.style.setProperty('--note-color', nextSwatchColors.bg);
+                featuresSection.style.setProperty('--note-color-fold', nextSwatchColors.fold);
+
+                currentSwatch.classList.remove('features-note-color-active');
+                nextSwatch.classList.add('features-note-color-active');
+
+                notesColorSwitcher.changeColor(notesColorSwitcher.activeSwatch())
+            }, 3000);
+        },
+    }
+
+    notesColorSwitcher.changeColor(notesColorSwitcher.activeSwatch());
+</script>

@@ -1,0 +1,57 @@
+<div id="open-source-container" class="max-width">
+    <div id="open-source-content">
+        <h2 class="noteski-title">Noteski is Open Source</h2>
+        <p>Noteski is an open-source project and is completely free to use, forever. The source code for Noteski is
+            available on GitHub for anyone to view and contribute to, and users are free to use the application without
+            incurring any costs.
+        </p>
+        <a href="https://github.com/aalani95/Noteski" target="_blank" class="noteski-btn open-source-action-github">
+            <span>Noteski on Github</span>
+            <img src="/assets/images/github.svg" alt="Github Logo">
+        </a>
+    </div>
+</div>
+
+
+<style>
+    #open-source {
+        padding: 6rem 0;
+        background-color: var(--off-white);
+    }
+
+    #open-source-container #open-source-content {
+        margin: 0 auto;
+    }
+
+    #open-source-content p {
+        font-size: 1.05rem;
+        margin: .8rem 0 1.7rem;
+    }
+
+    #open-source-content .open-source-action-github {
+        background-color: #181717;
+        border-color: #181717;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #open-source-content .open-source-action-github:active {
+        background-color: #484868;
+        border-color: #484868;
+    }
+
+    #open-source-content .open-source-action-github img {
+        width: 1.25rem;
+        height: 1.25rem;
+        filter: invert(1);
+        margin-left: .5rem;
+    }
+
+    /* Table lg / Notebook sm < */
+    @media only screen and (min-width: 960px) {
+        #open-source-container #open-source-content {
+            max-width: 65%;
+            text-align: center;
+        }
+    }
+</style>

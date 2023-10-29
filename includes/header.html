@@ -1,0 +1,65 @@
+<div id="header-container" class="max-width">
+    <div class="logo">
+        <img src="../assets/images/Noteski.svg" alt="Noteski Logo" class="noteski-logo" />
+    </div>
+    <div class="navigation">
+        <nav>
+            <a href="#local-storage">About</a>
+            <a href="#distraction-free">Features</a>
+        </nav>
+        <a href="https://app.noteski.me/" class="noteski-btn">Get Started</a>
+    </div>
+</div>
+
+
+<style>
+    header {
+        padding: .7rem 0;
+        border-bottom: 1px solid var(--borders);
+    }
+
+    #header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header img.noteski-logo {
+        max-width: 115px;
+    }
+
+    header .navigation {
+        display: flex;
+        gap: 2.75rem;
+    }
+
+    .navigation nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .navigation nav a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color .2s ease-in-out;
+        padding: 2.5px;
+        display: none;
+    }
+
+    .navigation nav a:hover {
+        color: var(--primary);
+    }
+
+
+    /* Table < */
+    @media only screen and (min-width: 600px) {
+        header img.noteski-logo {
+            max-width: 135px;
+        }
+
+        .navigation nav a {
+            display: inline;
+        }
+    }
+</style>

@@ -1,0 +1,32 @@
+<div id="footer-container" class="max-width">
+    <div>
+        <p>
+            Copyright © <span id="footer-year"></span> <a target="_blank" href="https://alani.dev/">Alani.dev</a>
+        </p>
+    </div>
+</div>
+
+
+<style>
+    #footer {
+        padding: 1.75rem 0;
+        background-color: var(--off-white);
+        border-top: 2px solid var(--borders);
+    }
+
+    #footer-container > div {
+        text-align: center;
+    }
+
+    #footer-container a {
+        text-decoration: none;
+    }
+</style>
+
+
+<script>
+    const year = new Date().getFullYear();
+    const copyrightYear = document.querySelector('#footer-year');
+
+    copyrightYear.innerText = year;
+</script>

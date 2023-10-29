@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+:root {
+    --primary: #753d99;
+    --primary-active: #8f4dba;
+    --primary-light: #763d9952;
+    --primary-lighter: #763d9925;
+    --text: #24262d;
+    --text-placeholder: #717377;
+    --off-white: #f6f6f6;
+    --borders: rgba(0, 0, 0, .1);
+    --white: #ffffff;
+    --black: #000000;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .95rem;
+    line-height: 1.25;
+    color: var(--text);
+    line-height: 1.55;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:active {
+    color: var(--primary-active);
+}
+
+img {
+    max-width: 100%;
+}
+
+.max-width {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.noteski-title {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    letter-spacing: .35px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,.1)
+}
+
+.no-select {
+    user-select: none;
+}
+
+/* Table < */
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 16.3px;
+    }
+}
+
+/* Table lg / Notebook sm < */
+@media only screen and (min-width: 960px) {
+    html {
+        font-size: 16.6px;
+    }
+    
+    .max-width {
+        max-width: 920px;
+    }
+
+    .noteski-title {
+        font-size: 1.95rem;
+    }
+}
+
+/* Computer < */
+@media only screen and (min-width: 1280px) {
+    html {
+        font-size: 16.8px;
+    }
+    
+    .max-width {
+        max-width: 1240px;
+    }
+}
